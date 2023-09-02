@@ -4,11 +4,11 @@ public class ATM {
     int numberOf50;
     int numberOf100;
     int sum;
-    public ATM(int numberOf20, int countOf50, int countOf100){
+    public ATM(int numberOf20, int numberOf50, int numberOf100){
         this.numberOf20 = numberOf20;
-        this.numberOf50 = countOf50;
-        this.numberOf100 = countOf100;
-        sum = (countOf100 * 100 + countOf50 * 50 + numberOf20 * 20);
+        this.numberOf50 = numberOf50;
+        this.numberOf100 = numberOf100;
+        sum = (numberOf100 * 100 + numberOf50 * 50 + numberOf20 * 20);
     }
     Scanner sc = new Scanner(System.in);
     public void add () {
@@ -19,48 +19,49 @@ public class ATM {
         System.out.println(sum);
     }
     public void deleteFromSum() {
-        int numToDel;
-        int number100 = 0;
-        int number50 = 0;
-        int number20 = 0;
+        int toTakeFromAccount;
+        int ClientCash100 = 0;
+        int ClientCash50 = 0;
+        int ClientCash20 = 0;
+
         boolean check;
         System.out.println("Enter sum u want to take out from account");
-        numToDel = sc.nextInt();
-        int k = numToDel;
-        if(sum < numToDel || numToDel % 10 != 0 || numToDel<0){
+        toTakeFromAccount = sc.nextInt();
+        int saveNumberToTakeFromAccount = toTakeFromAccount;
+        if(sum < toTakeFromAccount || toTakeFromAccount % 10 != 0 || toTakeFromAccount<0){
             check = false;
         }
         else{
-            while(numToDel > 0 ) {
-                if (numToDel >= 100 &&numToDel % 100 != 10 &&numToDel % 100 != 30 ) {
-                    numToDel -= 100;
-                    number100++;
-                } else if(numToDel % 100 == 10){
-                    numToDel -= 110;
-                    number20 += 3;
-                    number50++;
+            while(toTakeFromAccount > 0 ) {
+                if (toTakeFromAccount >= 100 &&toTakeFromAccount % 100 != 10 &&toTakeFromAccount % 100 != 30 ) {
+                    toTakeFromAccount -= 100;
+                    ClientCash100++;
+                } else if(toTakeFromAccount % 100 == 10){
+                    toTakeFromAccount -= 110;
+                    ClientCash20 += 3;
+                    ClientCash50++;
                 }
-                else if (numToDel % 100 == 30 ) {
-                    numToDel -= 130;
-                    number50++;
-                    number20 += 4;
+                else if (toTakeFromAccount % 100 == 30 ) {
+                    toTakeFromAccount -= 130;
+                    ClientCash50++;
+                    ClientCash20 += 4;
                 }
-                else if (numToDel >= 50 && numToDel % 50 != 10 && numToDel % 50 != 30) {
-                    numToDel -= 50;
-                    number50++;
-                } else if(numToDel % 50 == 10){
-                    numToDel -= 60;
-                    number20 += 3;
+                else if (toTakeFromAccount >= 50 && toTakeFromAccount % 50 != 10 && toTakeFromAccount % 50 != 30) {
+                    toTakeFromAccount -= 50;
+                    ClientCash50++;
+                } else if(toTakeFromAccount % 50 == 10){
+                    toTakeFromAccount -= 60;
+                    ClientCash20 += 3;
                 }
-                else if(numToDel % 50 == 30){
-                    numToDel -= 80;
-                    number20 += 4;
-                } else if (numToDel >= 20) {
-                    numToDel -= 20;
-                    number20++;
+                else if(toTakeFromAccount % 50 == 30){
+                    toTakeFromAccount -= 80;
+                    ClientCash20 += 4;
+                } else if (toTakeFromAccount >= 20) {
+                    toTakeFromAccount -= 20;
+                    ClientCash20++;
                 }
             }
-            sum -= k;
+            sum -= saveNumberToTakeFromAccount;
             check = true;
         }
         if(!check ){
@@ -69,7 +70,7 @@ public class ATM {
             System.out.println("Success");
             System.out.println(sum);
             System.out.println("Money is issued in banknotes: ");
-            System.out.printf("100: %d \t 50: %d\t 20: %d\n", number100, number50, number20);
+            System.out.printf("100: %d \t 50: %d\t 20: %d\n", ClientCash100, ClientCash50, ClientCash20);
         }
     }
     public void showInformation() {
