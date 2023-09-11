@@ -1,3 +1,5 @@
+package Homework7.Phone;
+
 import java.util.Arrays;
 public class Phone {
     int number;
@@ -28,9 +30,9 @@ public class Phone {
     }
     public void showInfo(){
 
-        System.out.println("Phone number is " + getNumber());
-        System.out.println("Phone model is " + model);
-        System.out.println("Phone weight is " + weight);
+        System.out.println("Homework7.Phone.Phone number is " + getNumber());
+        System.out.println("Homework7.Phone.Phone model is " + model);
+        System.out.println("Homework7.Phone.Phone weight is " + weight);
     }
     public void sendMessage(String... numbers) {
         System.out.println("send message to: " + Arrays.toString(numbers));

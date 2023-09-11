@@ -1,3 +1,5 @@
+package Homework7.Clinic;
+
 public class Clinic {
     public Doctor surgeon;
     public Doctor therapist;

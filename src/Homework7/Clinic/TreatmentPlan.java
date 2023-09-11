@@ -1,3 +1,5 @@
+package Homework7.Clinic;
+
 public class TreatmentPlan {
     public int code;
     public TreatmentPlan(int code){
