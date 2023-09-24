@@ -1,3 +1,13 @@
+package Homework6;
+import Homework6.Task1.Circle;
+import Homework6.Task1.Shape;
+import Homework6.Task1.Triangle;
+import Homework6.Task1.Rectangle;
+import Homework6.Task2.PostName;
+import Homework6.Task3.Finance;
+import Homework6.Task3.Products;
+import Homework6.Task3.Register;
+import Homework6.Task3.Staff;
 import java.util.Date;
 import java.util.Scanner;
 public class Homework6 {
@@ -33,6 +43,7 @@ public class Homework6 {
         shapes[3] = new Triangle(4, 5, 6, 7);
         shapes[4] = new Rectangle(2, 8);
         double totalPerimeter = 0;
+
         for (Shape shape : shapes) {
             totalPerimeter += shape.calculatePerimeter();
             System.out.println("Area: " + shape.calculateArea());
@@ -43,12 +54,16 @@ public class Homework6 {
     public static void registerTask(){
         Scanner sc = new Scanner(System.in);
         Register register = new Register();
+
         Products productsFirst = new Products(1, new Date(), "Book", 15);
         Products productsSecond = new Products();
+
         Finance financeFirst = new Finance(2, new Date(), 12, 45678);
         Finance financeSecond = new Finance();
+
         Staff staffFirst = new Staff(3, new Date(), new Date(), "Elena Anatolevna");
         Staff staffSecond = new Staff();
+
         register.saveInfo(productsFirst);
         register.saveInfo(productsSecond);
         register.saveInfo(financeFirst);

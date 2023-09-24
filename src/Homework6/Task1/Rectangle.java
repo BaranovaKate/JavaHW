@@ -1,4 +1,5 @@
-public class Rectangle extends Shape{
+package Homework6.Task1;
+public class Rectangle extends Shape {
     double sideOne;
     double sideSecond;
     public Rectangle ( double sideOne, double sideSecond){

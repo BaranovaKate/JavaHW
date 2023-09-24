@@ -1,3 +1,4 @@
+package Homework6.Task3;
 import java.util.Date;
 public class Products extends Information {
     String typeOfProduct;
