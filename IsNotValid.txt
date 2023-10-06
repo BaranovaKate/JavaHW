@@ -1,0 +1,2 @@
+Invalid document number: fgjjbixbjgfbxfb (Doesn't start with docnum or contract)
+Invalid document number: ffdbf775u68579 (Incorrect length)
