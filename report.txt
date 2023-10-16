@@ -1,0 +1,3 @@
+fgjjbixbjgfbxfb - Invalid (wrong start of the doc)
+docnum123456123 - Valid
+ffdbf775u68579 - Invalid (wrong length)
