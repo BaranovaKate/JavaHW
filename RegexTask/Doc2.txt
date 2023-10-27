@@ -1,0 +1,3 @@
+Неверный документ: 12345-abcde-6789-fgh-iJ1invalid
+Номер телефона: (12)34567890
+Недействительный email: invalid_email@example

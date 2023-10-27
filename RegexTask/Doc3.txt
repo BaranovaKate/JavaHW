@@ -1,0 +1,3 @@
+валидный документ: 2023-Feb-5678-def-ZW2
+Телефон: +(34)5678901
+Email: another_valid_email@example.com
